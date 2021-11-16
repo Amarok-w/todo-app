@@ -41,10 +41,10 @@ body {
 .task-filter__but {
   padding: 0 40px;
   height: 100%;
+  width: 140px;
   cursor: pointer;
   background: #79a8c7;
   font-weight: bold;
-  text-transform: uppercase;
   border-radius: 20px 0 0 0px;
   display: flex;
   align-items: center;
@@ -53,9 +53,6 @@ body {
   color: #454545;
   
   transition: all 220ms ease;
-}
-.task-filter__but:hover {
-  color: #fff;
 }
 .dropdown-content {
   position: absolute;
