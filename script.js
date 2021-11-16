@@ -148,6 +148,9 @@ function addTask(checked, text, id, newTask = true, filter) {
       deleteTask();
     })
 
+    //* task editing
+
+
     //* task completing processing
     const completeCheckbox = task.childNodes[1].childNodes[1];
     completeCheckbox.addEventListener("change", () => {

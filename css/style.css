@@ -6,9 +6,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Segoe UI',sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
-
 
 .wrapper {
   height: 100%;
@@ -51,7 +50,7 @@ body {
   justify-content: center;
   gap: 10px;
   color: #454545;
-  
+
   transition: all 220ms ease;
 }
 .dropdown-content {
@@ -67,14 +66,13 @@ body {
 
   display: none;
   height: 0;
-  
+
   transition: all 200ms ease-in-out;
 }
 .dropdown-content__item {
-  cursor:pointer;
+  cursor: pointer;
 
   transition: all 100ms ease-in;
-  
 }
 .dropdown-content__item:hover {
   text-shadow: 0 0 10px #00000025;
@@ -134,13 +132,13 @@ body {
   z-index: -1;
   opacity: 0;
 }
-.checkbox+label {
+.checkbox + label {
   width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 20px 0 0 ;
+  margin: 0 20px 0 0;
   border: 2px solid #5382a2;
   border-radius: 5px;
   padding: 3px;
@@ -148,10 +146,10 @@ body {
 
   transition: box-shadow 250ms ease-in-out;
 }
-.checkbox+label:hover {
+.checkbox + label:hover {
   box-shadow: inset 0 0 2px #00000035;
 }
-.checkbox:checked+label {
+.checkbox:checked + label {
   background: url(../fontawesome/svgs/solid/check.svg) no-repeat center center;
   background-size: 75%;
 }
@@ -164,13 +162,14 @@ body {
 }
 .task-edit-menu__edit {
   cursor: pointer;
+  display: none;
 }
 .task-edit-menu__delete {
   cursor: pointer;
 }
 
 .task-edit-menu__edit:hover {
-  color:#5382a2;
+  color: #5382a2;
 }
 .task-edit-menu__delete:hover {
   color: #f32359;
