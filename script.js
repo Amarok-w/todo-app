@@ -15,7 +15,6 @@ function tasksRecovery() {
     for (let i = 0; i < localStorage.length; i++) {
       if (regularRule.test(localStorage.key(i))) {
         const task = JSON.parse(localStorage.getItem(localStorage.key(i)));
-        console.log(task);
         addTask(task.checked, task.text, task.id, false);
       }
     }
@@ -46,7 +45,7 @@ function inputKeyAdding() {
   })
 }
 
-function addTask(checked, text, id, newTask = true) {
+function addTask(checked, text, id, newTask = true, filter) {
   if (lengthCheck(taskInput.value) || !newTask) {
   
     const taskInfo = {
@@ -122,10 +121,62 @@ function addTask(checked, text, id, newTask = true) {
   }
 }
 
+
 function taskFilter() {
+  const but = document.querySelector('.task-filter__but');
+  const content = document.querySelector('.dropdown-content');
+  let state = false;
+
+  let currentFilter = 0;
+  // store the filter type
+  // 0 - all
+  // 1 - completed
+  // 2- uncompleted
   
+
+  function hideDropList() {
+    but.style.color = '#454545';
+
+    content.style.height = 0;
+    content.style.padding = '0';
+
+    setTimeout(() => {
+      content.style.display = 'none';
+    }, 200);
+  }
+
+  but.addEventListener('click', () => {
+    state = !state;
+    if (state) {
+      but.style.color = '#fff';
+      but.style.borderRadius = '20px 0 0 0';
+
+      content.style.display = 'flex';
+
+      setTimeout(() => {
+        content.style.height = '110px';
+        content.style.padding = '10px 0';
+      }, 0);
+    }
+    else {
+      hideDropList();
+    }
+  })
+
+  content.addEventListener('click', el => {
+    currentFilter = el.target.getAttribute('data-current-filter'); 
+    hideDropList(); 
+  })
+
+  document.addEventListener('click', el => {
+    if (el.path.indexOf(but) == -1) {
+      hideDropList();
+    }
+  })
+
 }
 
+taskFilter();
 tasksRecovery();
 butLogic();
 inputKeyAdding();

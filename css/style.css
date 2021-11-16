@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI',sans-serif;
 }
 
 
@@ -27,22 +27,70 @@ body {
   font-size: 2rem;
   color: #fff;
 }
-.main {
-}
 .entry-field {
-  display: flex;
-  justify-content: center;
   margin: 25px 0;
 }
+.entry-field-container {
+  display: flex;
+  justify-content: center;
+}
+
+.task-filter {
+  position: relative;
+}
+.task-filter__but {
+  padding: 0 40px;
+  height: 100%;
+  cursor: pointer;
+  background: #79a8c7;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 20px 0 0 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #454545;
+  
+  transition: all 220ms ease;
+}
+.task-filter__but:hover {
+  color: #fff;
+}
+.dropdown-content {
+  position: absolute;
+  background: #79a8c7;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* text-transform: uppercase; */
+  color: #fff;
+  width: 100%;
+  border-radius: 0 0 20px 0;
+
+  display: none;
+  height: 0;
+  
+  transition: all 200ms ease-in-out;
+}
+.dropdown-content__item {
+  cursor:pointer;
+
+  transition: all 100ms ease-in;
+  
+}
+.dropdown-content__item:hover {
+  text-shadow: 0 0 10px #00000025;
+}
+
 .entry-field-flex {
-  width: 600px;
+  width: 700px;
   height: 35px;
   display: flex;
 }
 .input {
   background: #c0d5e9;
   width: 80%;
-  border-radius: 20px 0 0 20px;
   padding: 15px;
   font-size: 1.25rem;
 }

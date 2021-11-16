@@ -16,14 +16,29 @@
     </header>
     <main class="main">
       <div class="entry-field">
-        <div class="task-filter">
+
+        <div class="entry-field-container">
+
           
+
+          <div class="entry-field-flex">
+
+            <div class="task-filter">
+              <button class="task-filter__but">
+                All <span class="fas fa-caret-down"></span>
+              </button>
+              <div class="dropdown-content">
+                <p class="dropdown-content__item" data-current-filter="0">All</p>
+                <p class="dropdown-content__item" data-current-filter="1">Completed</p>
+                <p class="dropdown-content__item" data-current-filter="2">Uncompleted</p>
+              </div>
+            </div>
+
+            <input type="text" name="" id="" class="input">
+            <button class="entry-field__add-but">add</button>
+          </div>
         </div>
 
-        <div class="entry-field-flex">
-          <input type="text" name="" id="" class="input">
-          <button class="entry-field__add-but">add</button>
-        </div>
       </div>
 
       <div class="tasks">
